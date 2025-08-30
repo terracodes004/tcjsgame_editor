@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCJSgame playground</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="A playground for TCJSgame.">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <dialog open="">
+        <button onclick="$('dialog').fadeToggle(500)">⛔</button>
+        <br>
+        <iframe srcdoc="<h1>herfe</h1>"></iframe>
+    </dialog>
+    <header>
+        <h1>
+            TCJSgame Playground
+            <nav>
+                <ul>
+                    <li><button onclick="$('.file').fadeIn(3000)">Open</button></li>
+                    <li><button onclick="
+                    $('dialog').fadeToggle(500)
+                    code = `<!DOCTYPE html>\n<html lang='en'>\n<head>\n<meta charset='UTF-8'>\n<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n<title>Document</title>\n</head>\n<body><script>${document.querySelector('textarea').value}</script>\n</body>\n</html>`
+                    document.querySelector('iframe').srcdoc = code
+                    ">Run</button></li>
+                    <li><button>View</button></li>
+                    <li><button>Doc</button></li>
+                    <li><button>Save</button></li>
+                </ul>
+            </nav>
+            
+        </h1>
+        <h5 id="title">
+        Untitled
+    </h5>
+    </header>
+    
+    <main>
+    <div class="file" title="File bar">
+        <h2>Files <button style="float: right;" onclick="$('.file').fadeOut('1000')">⛔</button></h2>
+        <button onclick="
+            con = confirm('Are you sure to create a new file? Unsaved changes will be lost.');
+            if(con){
+                $('textarea').val('');
+                $('#title').text('Untitled');
+            }
+        ">🆕</button>
+        <button onclick="
+        con = confirm('Are you sure to open a file? Unsaved changes will be lost.');
+        if(con){
+            inp.click();
+            inp.onchange = e => {
+                let file = e.target.files[0];
+                let reader = new FileReader();
+                reader.readAsText(file,'UTF-8');
+                reader.onload = readerEvent => {
+                    let content = readerEvent.target.result;
+                    $('textarea').val(content);
+                    $('#title').text(file.name);
+                }
+            }
+            
+        }
+        ">📂</button>
+        <div id="file">
+
+        </div>
+    </div>
+    <section>
+        <select id="version" p>
+            <option value="v3" selected>V3</option>
+            <option value="v2">V2</option>
+            <option value="v1">V1</option>
+        </select>
+        <textarea id="js" wrap="off"></textarea>
+        <div class="con">
+            <details>
+                <summary>console</summary>
+                
+            </details>
+        </div>
+    </section>
+</main>
+<script>
+    let inp = document.createElement("input")
+    inp.type = "file"
+    inp.accept = ".js"
+</script>
+<script src="script.js"></script>
+</body>
+</html>

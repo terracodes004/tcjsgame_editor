@@ -1,0 +1,105 @@
+body{
+    font-size: 20px;
+    font-family: Comic Sans MS;
+    background-color: rgb(41, 40, 40);
+    color: aliceblue;
+    margin: 3px;
+}
+
+header{
+    background-color: rgb(30, 29, 29);
+    
+    width: 100%;
+    margin: 0%;
+
+}
+nav{
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        li{
+            list-style: none;
+            button{
+                color: rgb(200, 197, 197);
+                background-color: rgba(200, 197, 197, 0);
+                border: none;
+                font-size: large;
+                cursor: pointer;
+            }
+            button:hover{
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+}
+main{
+    margin :0;
+    text-align: center;
+}
+section{
+    width: 90%;
+    margin: 0;
+    margin: auto;
+
+}
+textarea{
+    width: 100%;
+    height: 300px;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 14px;
+    background-color: rgba(61, 60, 60, 0.87);
+    color: white;
+    padding: 1mm;
+    resize: none;
+}
+
+.con{
+    background-color: rgb(30, 29, 29);
+    width: 100%;
+    height: 25%;
+}
+.file{
+    margin: auto;
+    position: absolute;
+    left: auto;
+    width: 50%;
+    height: 75%;
+    z-index: 10000;
+    background-color: rgb(30, 29, 29);
+}
+select{
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    margin: auto;
+}
+button{
+    cursor: pointer;
+}
+dialog{
+    z-index: 1000000;
+    width: 75%;
+    text-align: center;
+    padding: 1cm;
+    display: none;
+    iframe{
+        width: 95%;
+    }
+    button{
+        float: right;
+        position: absolute;
+        right: 12px;
+        top: 0;
+    }
+}
+button{
+    border: none;
+    padding: 1mm;
+    cursor: pointer;
+    background-color: rgba(255, 222, 173, 0);
+    font-size: 25px;
+
+}
+/* #title{
+    position: absolute;
+} */
