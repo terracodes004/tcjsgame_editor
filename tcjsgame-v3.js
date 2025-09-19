@@ -1,3 +1,4 @@
+let com;
 class Display {
     constructor() {
         this.canvas = document.createElement("canvas");
@@ -349,7 +350,7 @@ class Camera {
     }
 }
 
-var comm = [];
+const comm = [];
 var move ={
     backward : function(id, steps){
         id.physics = true;
